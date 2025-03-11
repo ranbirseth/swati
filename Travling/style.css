@@ -1,4 +1,4 @@
-/* styles.css */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,13 +9,15 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
-
+/* //header and navigation bar styling */
 header {
     position: fixed;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
     padding: 1rem;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+   
 }
 
 nav {
@@ -26,14 +28,7 @@ nav {
     align-items: center;
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adding shadow for better separation */
-}
+
 
 nav h1 {
     color: white;
@@ -86,6 +81,7 @@ nav ul li a:hover {
     background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
+    filter: brightness(50%);
 }
 
 .parallax2 .parallax-back {
@@ -95,6 +91,8 @@ nav ul li a:hover {
 }
 
 .parallax-front {
+    padding: 20px;
+    animation: fadeIn 2s ease-out;
     top: 20rem;
     z-index: 2;
     text-align: center;
@@ -122,6 +120,12 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+.parallax-front button:hover {
+    background-color: #ff4500;
+}
+
+
+/* destination  section  */
 
 .paris-img{
     background-size: cover;
@@ -260,111 +264,7 @@ header {
     margin-bottom: 1.5rem;
 }
 
-/* About Section */
-.about {
-    padding: 4rem 2rem;
-    text-align: center;
-    background-color: #333;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    border-radius: 8px;
-}
-
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-}
-
-footer p {
-    margin-bottom: 10px;
-}
-
-/* Social Icons in Footer */
-footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-footer .social-icons a {
-    color: white;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-footer .social-icons a:hover {
-    color: #ff6b6b;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    
- .parallax {  
-    height: 100vh;     
-        position: relative; 
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .parallax-front h2 {
-        font-size: 2.5rem;
-    }
-
-    .parallax-front p {
-        font-size: 1.2rem;
-    }
-
-    .destinations-grid {
-        grid-template-columns: 1fr; /* Stack destinations in a single column */
-    }
-
-    .destination {
-        padding: 1.5rem;
-    }
-    nav {
-        display: block;
-       height: 10vh;
-       width: 100%;
-    }
-
-    nav h1 {
-        font-size: 1rem;
-    }
-
-    nav ul {
-        display: flex;
-      margin-left: -30px;
-      padding: .8rem;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    nav ul li {
-      
-       
-    }
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-       font-size: 12px;
-        transition: color 0.3s ease, transform 0.3s ease;
-    }
-}
-
-
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
+/* experiences Section */
 
 .container {
     width: 80%;
@@ -403,7 +303,7 @@ body {
     margin: 0 auto;
 }
 
-/* Experience Cards */
+
 .experience-card {
     background-color: #fff;
     border-radius: 10px;
@@ -462,7 +362,7 @@ body {
     background-color: #00796b;
 }
 
-/* Color Themes for Each Experience */
+
 .experience-card.adventure {
     background-image: url('https://images.unsplash.com/photo-1571494003856-ade8688e8fe5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
@@ -481,7 +381,25 @@ body {
     background-position: center;
 }
 
+
 /* travling-tips parallax section */
+
+
+.travling-parallax {
+  
+    background-image: url('https://wallpapercave.com/wp/wp6895480.jpg');
+    height: 40px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+} 
+
+
+
+
+
 
 
 .travling-parallax {
@@ -500,6 +418,62 @@ body {
   .travel-card h2 {
     color: rgb(7, 122, 7);
   }
+
+
+
+.travel-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 70vh;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+
+    }
+    .tip {
+        margin-bottom: 20px;
+      }
+      
+      .tip h3 {
+        margin-bottom: 5px;
+        font-size: 1.2em;
+        color: #333;
+      }
+      
+      .tip p {
+        font-size: 1em;
+        color: #666;
+      }
+      
+
+
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
 
 
 /* Responsive Design */
@@ -586,65 +560,57 @@ body {
     }
 /* travling-tips parallax section */
 
-.travling-parallax {
-  
-        background-image: url('https://wallpapercave.com/wp/wp6895480.jpg');
-        height: 40px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-    } 
-
-
-
-    .section-title {
-        font-size: 1.5rem;
+@media screen and (max-width: 768px) {
+    
+ .parallax {  
+       
+        position: relative; 
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .section-description {
-        font-size: 0.9rem;
+    .parallax-front h2 {
+        font-size: 2.5rem;
+    }
+
+    .parallax-front p {
+        font-size: 1.2rem;
+    }
+
+    .destinations-grid {
+        grid-template-columns: 1fr; /* Stack destinations in a single column */
+    }
+
+    .destination {
+        padding: 1.5rem;
+    }
+    nav {
+        display: block;
+       height: 10vh;
+       width: 100%;
+    }
+
+    nav h1 {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        display: flex;
+      margin-left: -30px;
+      padding: .8rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+       font-size: 12px;
+        transition: color 0.3s ease, transform 0.3s ease;
     }
 }
-.travel-card {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
-    max-height: 70vh;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
-    }
-    @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: scale(0.8);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-
-    }
-    .tip {
-        margin-bottom: 20px;
-      }
-      
-      .tip h3 {
-        margin-bottom: 5px;
-        font-size: 1.2em;
-        color: #333;
-      }
-      
-      .tip p {
-        font-size: 1em;
-        color: #666;
-      }
-      
-
-      
+}
